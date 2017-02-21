@@ -1,0 +1,346 @@
+body{
+     color:#555;
+     font:normal 16px/24px  'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+h1,h2,h3,h4,h5{
+    margin:0;
+    padding:0;
+}
+h3{
+    font-size: 1.4em;
+    font-weight: 600;
+}
+h4{
+    font-size: 1.2em;
+}
+.row h3{
+    margin-bottom: 20px;
+}
+/*** 图标与字体的距离 ***/
+h3 span.glyphicon{
+    margin-right: 6px;
+}
+/********** 导航栏 **********/
+/*** 导航栏的背景色 ***/
+#box_bg{
+    background: transparent;
+    text-align: center;
+    line-height: 0;
+    opacity: 0.9;
+    transition: all 0.7s linear;
+}
+/*** 导航栏的定位 ***/
+#section_box{
+    position: fixed;
+    top: 0;left: 0;right: 0;
+    overflow: visible;
+    z-index: 1000;
+}
+#nav{
+    display: inline-block;
+}
+#nav>li>p b{
+    position: absolute;
+    top: -20px;
+    left: 35px;
+    display: inline-block;
+    width: 0;
+    height:0;
+    border:10px solid transparent;
+    border-bottom-color: #dec4a9 ;
+}
+#nav>li>p{
+    position: absolute;
+    bottom: -7px;
+    left: -13px;
+    width: 90px;
+    padding: 15px 8px;
+    border-radius: 3px;
+    opacity: 0;
+    background: #dec4a9;
+    color: #101010;
+    z-index: -10;
+    font-weight: bold;
+}
+@keyframes change{
+    from{
+        opacity: 0;
+        bottom: -7px;
+    }
+    60%{
+        opacity: 0.1;
+        bottom: -40px;
+    }
+    to{
+        opacity: 1;
+        bottom: -50px;
+    }
+}
+#nav>li.active p{
+    animation: change 0.6s linear;
+    animation-fill-mode: forwards;
+}
+#nav>li{
+    float: left;
+    position: relative;
+    color: #fff;
+    padding: 1.3em 1.2em;
+    transition: all 0.5s linear;
+}
+#nav>li span{
+    font-size: 1.5em;
+}
+#nav>li:hover{
+    background: #dec4a9;
+    color:#101010;
+}
+
+/***  背景图  ***/
+#header{
+    height:auto;
+    /*background: url(../img/header-bg.jpg) no-repeat center center;*/
+    background-size:cover;
+    position: relative;
+}
+#header ul{
+    display: inline-block;
+}
+.video-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background: transparent url('../img/grid.png') repeat;
+    -webkit-backface-visibility: hidden;
+}
+#headertext{
+    position: absolute;
+    top:45%;
+    left:1%;
+    width:100%;
+    z-index:100;
+}
+#headertext span{
+    font-size: 5em;
+    color: #fff;
+    display: none;
+}
+#headertext span.active{
+    display: block;
+}
+/******* 关于个人 ******/
+#about{
+    background: #2c3e50;
+    color:#eee;
+    padding:3.2em 0;
+}
+/******* 教育背景 *******/
+#resume{
+    background:#F2F2F2;
+}
+#resume .row{
+    padding:3.2em 0;
+    border-bottom: 1px solid #ccc;
+}
+#resume .row h4{
+    color:#2c3e50;
+    font-weight: 700;
+    padding-bottom: 0.5em;
+}
+#resume .row:last-child{
+    border: none;
+}
+/**** 专业技能 ****/
+#skills{
+    background: #2c3e50;
+    padding:3.2em 0;
+    color:#fff;
+}
+#skills .canvas_box .col-md-4{
+    margin-bottom: 20px;
+}
+/****** 我的作品 ******/
+#project_box{
+    padding:3.2em 0;
+    background: #F2F2F2;
+}
+.project .work img{
+    border-radius: 2em;
+}
+.project .col-md-3{
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s linear;
+}
+.project .col-md-3 div a{
+    display: inline-block;
+    margin-top:105%;
+    transition: all 0.5s linear;
+}
+.project .col-md-3 div p{
+    margin-top: -48px;
+    font-size: 1.3em;
+    color: deeppink;
+    font-weight: 700;
+    transition: all 0.5s linear;
+}
+.project .col-md-3 div{
+    border-radius: 2em;
+    position: absolute;
+    top: 0;left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(65, 85, 115, 0.4);
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.project .col-md-3:hover{
+    transform: scale(1.1);
+}
+.project .col-md-3 div:hover{
+    opacity: 1;
+}
+.project .col-md-3 div:hover p{
+    margin-top: 34%;
+}
+.project .col-md-3 div:hover a{
+    margin-top: 0;
+}
+/******* 请联系我 ********/
+#contact{
+    padding:3.2em 0;
+    background: #2f2f2f;
+    color:#fff;
+}
+#contact h4{
+    margin-bottom: 0.5em;
+}
+#contact p{
+    font-weight:normal;
+}
+#contact .row img{
+    border-radius: 50%;
+}
+/**** 标题下划线 ****/
+.row h3>p{
+    border-top:2px solid #1abc9c ;
+    margin: 0 auto;
+    width:110%;
+    margin-top: 0.2em;
+}
+.row h3{
+    display: inline-block;
+}
+
+#contact .col-md-3 .col-md-12{
+    margin-bottom: 0.3em;
+}
+/** canvas 样式 **/
+canvas{
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+canvas:hover{
+    transform: scale(1.2);
+}
+/** canvas 样式 **/
+.modal{
+    color: #000;
+}
+.modal-content{
+    border-radius: 0;
+}
+/**** go_top回到顶部 ****/
+#go_top{
+    position: fixed;
+    bottom:7em;
+    right: 5em;
+    border: 1px solid #1a67b5;
+    padding: 0.2em 0.3em;
+    z-index: 2000;
+    background: #1a67b5;
+    color:#e9af5d;
+    transition: all 0.5s linear;
+    opacity: 0.3;
+    display: none;
+}
+#go_top:hover{
+    opacity: 0.9;
+}
+#go_top span{
+    font-size: 2em;
+}
+/*** 媒体查询 ***/
+@media (max-width: 767px){
+    #header{
+        background-position:-500px center;
+    }
+    #headertext span {
+        font-size: 3em;
+    }
+    .project .work{
+        margin-bottom: 1em;
+    }
+    #go_top{
+        bottom: 4em;
+        right: 2em;
+    }
+    #go_top span{
+        font-size: 1.5em;
+    }
+    #nav>li span{
+        font-size: 1.3em;
+    }
+    #nav>li{
+        padding:0.9em 0.9em;
+    }
+    #nav>li:hover{
+        background:rgb(96, 96, 101);
+        color:#fff;
+    }
+}
+/***** 防止在手机端中hover的影响，会让颜色和字体的颜色不变 *****/
+#nav>li.actives{
+    color:#101010;
+    background: #dec4a9;
+}
+@media (max-width: 460px){
+    #skills canvas{
+        width: 150px;
+        height:150px;
+    }
+    #header{
+        height:auto;
+        background-position: -180px center;
+    }
+    #headertext span {
+        font-size: 2em;
+    }
+    #contact .col-md-3 .col-xs-1{
+        width:15%;
+    }
+    #go_top{
+        bottom: 3em;
+        right: 1.5em;
+    }
+    #go_top span{
+        font-size: 1.2em;
+    }
+    #nav>li span{
+        font-size: 1em;
+    }
+    #nav>li{
+        padding:0.6em 0.6em;
+    }
+}
+@media (max-width: 400px){
+    .project .col-md-3 div:hover p{
+        margin-top: 19%;
+    }
+    .project .col-md-3 div a{
+        width: 32%;
+    }
+}
